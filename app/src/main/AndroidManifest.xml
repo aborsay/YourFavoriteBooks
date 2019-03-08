@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="xyz.borsay.yourfavoritebooks">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/books"
+        android:label="@string/app_title"
+        android:roundIcon="@drawable/books"
+        android:supportsRtl="true"
+        android:theme="@style/FullScreen"
+        android:name=".YourFavoriteBooksApplication">
+        <activity
+            android:name=".BookListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_title"
+
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".EditOrAddBookActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen">
+        </activity>
+    </application>
+
+</manifest>
