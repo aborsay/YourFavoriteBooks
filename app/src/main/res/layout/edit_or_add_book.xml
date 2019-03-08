@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintBottom_toTopOf="@+id/topGuide"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="3"
+            android:contentDescription="@string/image"
+            android:onClick="moveBackToMain"
+            android:scaleType="centerInside"
+            android:src="@drawable/books"
+            app:srcCompat="@drawable/books" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/topInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeMinTextSize="8sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform" />
+
+    </LinearLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/topGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".1" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/topEditGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".2" />
+
+    <TextView
+        android:id="@+id/bookTitleLabel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_vertical|end"
+        android:paddingStart="0dp"
+        android:paddingEnd="10dp"
+        android:text="@string/bookTitleLabel"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/bookAuthorLabel"
+        app:layout_constraintEnd_toStartOf="@id/bookTitle"
+        app:layout_constraintHorizontal_weight=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topEditGuide" />
+
+    <EditText
+        android:id="@+id/bookTitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:inputType="text"
+        android:text="@string/blankString"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:autofillHints="@string/bookTitle"
+        app:layout_constraintBottom_toTopOf="@id/bookAuthor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/bookTitleLabel"
+        app:layout_constraintTop_toTopOf="@+id/topEditGuide" />
+
+    <TextView
+        android:id="@+id/bookAuthorLabel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_vertical|end"
+        android:paddingStart="0dp"
+        android:paddingEnd="10dp"
+        android:text="@string/authorsNameLabel"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/bookGenreLabel"
+        app:layout_constraintEnd_toStartOf="@id/bookAuthor"
+        app:layout_constraintHorizontal_weight=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookTitleLabel" />
+
+    <EditText
+        android:id="@+id/bookAuthor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:inputType="textShortMessage"
+        android:text="@string/blankString"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/book"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/bookAuthorLabel"
+        app:layout_constraintTop_toBottomOf="@+id/bookTitle" />
+
+    <TextView
+        android:id="@+id/bookGenreLabel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_vertical|end"
+        android:paddingStart="0dp"
+        android:paddingEnd="10dp"
+        android:text="@string/bookGenreLabel"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomGuide"
+        app:layout_constraintEnd_toStartOf="@id/book"
+        app:layout_constraintHorizontal_weight=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookAuthorLabel" />
+
+    <RelativeLayout
+        android:id="@+id/book"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomGuide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/bookGenreLabel"
+        app:layout_constraintTop_toBottomOf="@id/bookAuthor">
+
+        <Spinner
+            android:id="@+id/bookGenre"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+
+            android:background="@drawable/spinner_border"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:spinnerMode="dropdown" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="false"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/image"
+            android:cropToPadding="false"
+            android:scaleType="fitCenter"
+            android:src="@drawable/drop_arrow" />
+
+    </RelativeLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/bottomGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".7"
+        app:layout_constraintTop_toBottomOf="@id/bookAuthorLabel" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/transparent"
+        android:contentDescription="@string/image"
+        android:onClick="updateBook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomGuide"
+        app:srcCompat="@drawable/save" />
+
+</android.support.constraint.ConstraintLayout>

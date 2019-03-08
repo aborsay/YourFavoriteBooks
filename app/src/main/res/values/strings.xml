@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Your Favorite Books</string>
+    <string name="app_title">Favorite Books</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="image">an image</string>
+    <string name="bookAuthor">Aaron Borsay</string>
+    <string name="bookTitle">Binara</string>
+    <string name="bookGenre">Fantasy</string>
+    <string name="bookGenreID">0</string>
+    <string name="bookTitleLabel">Book Title:</string>
+    <string name="authorsNameLabel">Authors Name:</string>
+    <string name="bookGenreLabel">Book Genre:</string>
+    <string name="blankString" />
+</resources>
